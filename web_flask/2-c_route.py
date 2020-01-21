@@ -24,9 +24,7 @@ def _text_random(text):
     strict_slashes = False
     if '_' in text:
         text.replace(" ")
-        return 'C {}'.format(text)
-    else:
-        return 'C {}'.format(text)
+    return 'C {}'.format(text)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
