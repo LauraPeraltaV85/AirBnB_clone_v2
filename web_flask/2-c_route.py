@@ -23,7 +23,7 @@ def _text_random(text):
     """prints random text"""
     strict_slashes = False
     if '_' in text:
-        text.replace('_', ' ')
+        text = text.replace("_", " ")
     return 'C {}'.format(text)
 
 if __name__ == "__main__":
