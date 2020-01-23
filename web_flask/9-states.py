@@ -23,8 +23,7 @@ def states_filter(idn=None):
         for key, value in states.items():
             if "State" in key:
                 stat[key] = value
-        return render_template("9-states.html", states=stat, i\
-dn=idn)
+        return render_template("9-states.html", states=stat, idn=idn)
     else:
         for key, value in states.items():
                 if "City" in key:
@@ -33,8 +32,7 @@ dn=idn)
                 if "State" in key:
                     if value.id == idn:
                         stat[key] = value
-        return render_template("9-states.html", cities=cit, st\
-ates=stat)
+        return render_template("9-states.html", cities=cit, states=stat)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
