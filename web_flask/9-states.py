@@ -12,7 +12,7 @@ def teardown_db(self):
 
 
 @app.route('/states')
-@app.route('/states/<idn>')
+@app.route('/states/<string:idn>')
 def states_filter(idn=None):
     """print filtered states"""
     strict_slashes = False
