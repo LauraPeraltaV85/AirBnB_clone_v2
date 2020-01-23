@@ -12,7 +12,7 @@ def teardown_db(self):
 
 
 @app.route('/states')
-@app.route('/states/<string:idn>')
+@app.route('/states/<idn>')
 def states_filter(idn=None):
     """print filtered states"""
     strict_slashes = False
@@ -23,7 +23,8 @@ def states_filter(idn=None):
         for key, value in states.items():
             if "State" in key:
                 stat[key] = value
-        return render_template("9-states.html", states=stat, idn=idn)
+        return render_template("9-states.html", states=stat, i\
+dn=idn)
     else:
         for key, value in states.items():
                 if "City" in key:
@@ -32,7 +33,8 @@ def states_filter(idn=None):
                 if "State" in key:
                     if value.id == idn:
                         stat[key] = value
-        return render_template("9-states.html", cities=cit, states=stat)
+        return render_template("9-states.html", cities=cit, st\
+ates=stat)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
