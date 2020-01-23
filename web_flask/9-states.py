@@ -23,7 +23,7 @@ def states_filter(idn=None):
         for key, value in states.items():
             if "State" in key:
                 stat[key] = value
-        return render_template("7-states_list.html", states=stat)
+        return render_template("7-states_list.html", states=stat, idn=idn)
     else:
         for key, value in states.items():
                 if "City" in key:
