@@ -6,8 +6,7 @@
     <BODY>
       {% if states %}
       {% for state in states.values() %}
-        <H1>State: {{ state.name }}</H1>
-        {% endfor %}
+        <H1>State: {{ state.name }}</H1>{% endfor %}
         <H3>Cities:</H3>
         <UL>
           {% for city in cities.values()|sort(attribute='name'\
